@@ -1,7 +1,7 @@
-Project Guidelines
+## Project Guidelines
 Your project should conform to the following set of guidelines:
 
- Models
+## Models
 You need to create the following relationships:
 
 - A `Restaurant` has many `Pizza`s through `RestaurantPizza`
@@ -16,7 +16,7 @@ Add any code needed in the model files to establish the relationships. Then, run
 
  You are welcome to generate your own seed data to test the application.
 
-Validations
+## Validations
 Add validations to the `RestaurantPizza` model:
 
 - must have a `price` between 1 and 30
@@ -25,7 +25,7 @@ Routes
 Set up the following routes. Make sure to return JSON data in the format
 specified along with the appropriate HTTP verb.
 
-GET /restaurants
+## GET /restaurants
 Return JSON data in the format below:
 
 ```
@@ -43,7 +43,7 @@ Return JSON data in the format below:
 ]
 ```
 
-GET /restaurants/:id
+## GET /restaurants/:id
 If the `Restaurant` exists, return JSON data in the format below:
 
 ```
@@ -75,7 +75,7 @@ the appropriate HTTP status code:
 }
 ```
 
-DELETE /restaurants/:id
+## DELETE /restaurants/:id
 If the `Restaurant` exists, it should be removed from the database, along with
 any `RestaurantPizza`s that are associated with it (a `RestaurantPizza` belongs
 to a `Restaurant`, so you need to delete the `RestaurantPizza`s before the
@@ -93,7 +93,7 @@ the appropriate HTTP status code:
 }
 ```
 
-GET /pizzas
+## GET /pizzas
 Return JSON data in the format below:
 
 ```
@@ -111,7 +111,7 @@ Return JSON data in the format below:
 ]
 ```
 
-POST /restaurant_pizzas
+## POST /restaurant_pizzas
 This route should create a new `RestaurantPizza` that is associated with an
 existing `Pizza` and `Restaurant`. It should accept an object with the following
 properties in the body of the request:
